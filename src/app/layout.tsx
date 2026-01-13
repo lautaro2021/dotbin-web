@@ -1,30 +1,28 @@
-"use client"
-
 import type { ReactNode } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
+import { defaultMetadata, generateStructuredData } from "@/lib/seo";
+import { Providers } from "./providers";
 
 import "./index.css";
 
-const queryClient = new QueryClient();
+export const metadata = defaultMetadata;
 
 export default function RootLayout({
     children,
 }: {
     children: ReactNode;
 }) {
+    const structuredData = generateStructuredData();
+
     return (
-        <html lang="en">
+        <html lang="es">
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </head>
             <body>
-                <QueryClientProvider client={queryClient}>
-                    <TooltipProvider>
-                        {children}
-                        <Toaster />
-                        <Sonner />
-                    </TooltipProvider>
-                </QueryClientProvider>
+                <Providers>{children}</Providers>
             </body>
         </html>
     );

@@ -3,33 +3,33 @@ import { BarChart3, Calendar, Users, FileText, Stethoscope, Shield } from 'lucid
 const features = [
     {
         icon: BarChart3,
-        title: 'Analíticas en Tiempo Real',
-        description: 'Paneles completos con información accionable. Rastrea resultados de pacientes, métricas de ingresos y eficiencia operativa.',
+        title: 'Dashboard y Analíticas Médicas',
+        description: 'Dashboard integral para centros médicos con métricas en tiempo real. Rastrea resultados de pacientes, ingresos de tratamientos estéticos y eficiencia operativa de tu clínica.',
     },
     {
         icon: Calendar,
-        title: 'Agenda Inteligente',
-        description: 'Gestión de citas potenciada por IA. Reduce las ausencias con recordatorios automáticos y optimización inteligente.',
+        title: 'Agenda de Turnos Médicos',
+        description: 'Sistema de gestión de turnos optimizado para clínicas de medicina estética. Reduce ausencias con recordatorios automáticos y optimización inteligente de citas.',
     },
     {
         icon: Users,
-        title: 'Base de Pacientes',
-        description: 'Registros de pacientes centralizados con búsqueda avanzada. Acceso rápido a datos demográficos, historial y comunicaciones.',
+        title: 'CRM y Gestión de Pacientes',
+        description: 'Software CRM especializado para medicina con base de datos centralizada. Gestiona fichas de pacientes, historial de tratamientos y comunicaciones desde un solo lugar.',
     },
     {
         icon: FileText,
-        title: 'Historial Clínico',
-        description: 'Trazabilidad completa y datos históricos. Cada interacción, tratamiento y resultado documentado y buscable.',
+        title: 'Historia Clínica Electrónica',
+        description: 'Sistema de historia clínica digital completo. Documenta cada consulta, tratamiento estético y resultado con trazabilidad total y acceso instantáneo.',
     },
     {
         icon: Stethoscope,
-        title: 'Planes de Tratamiento',
-        description: 'Crea, personaliza y rastrea protocolos de tratamiento. Colabora con tu equipo de atención sin problemas.',
+        title: 'Gestión de Tratamientos Estéticos',
+        description: 'Crea, personaliza y gestiona planes de tratamiento personalizados. Software diseñado para flujos de trabajo de medicina estética y cosmética.',
     },
     {
         icon: Shield,
-        title: 'Seguridad Certificada',
-        description: 'Seguridad de nivel empresarial con encriptación de extremo a extremo. Tus datos protegidos por estándares líderes.',
+        title: 'Seguridad y Cumplimiento Médico',
+        description: 'Cumple con normativas de protección de datos médicos. Encriptación de extremo a extremo y seguridad certificada para centros de salud.',
     },
 ];
 
@@ -40,16 +40,16 @@ export const Features = () => {
                 {/* Section header */}
                 <div className="mb-16 text-center">
                     <div className="mb-4 inline-block rounded-full border border-primary/30 bg-accent px-4 py-1.5 text-sm text-accent-foreground">
-                        Funcionalidades
+                        Software Completo para Medicina Estética
                     </div>
                     <h2 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-                        Todo lo que necesitas.
+                        Todo lo que tu clínica necesita.
                         <br />
-                        <span className="text-muted-foreground">Nada que no.</span>
+                        <span className="text-muted-foreground">En un solo lugar.</span>
                     </h2>
                     <p className="mx-auto max-w-2xl text-muted-foreground">
-                        Diseñado para profesionales de la salud que exigen excelencia.
-                        Cada función pensada para flujos de trabajo clínicos.
+                        Software médico diseñado para profesionales de la medicina estética que exigen excelencia.
+                        Cada funcionalidad pensada para optimizar la gestión de tu centro de salud.
                     </p>
                 </div>
 

@@ -27,7 +27,7 @@ export const CTA = () => {
                                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                             </Button>
                             <Button variant="outline" size="lg" className="border-foreground/20 px-8 hover:bg-foreground/5">
-                                Hablar con ventas
+                                Contactanos
                             </Button>
                         </div>
                         <p className="mt-6 text-sm text-muted-foreground">

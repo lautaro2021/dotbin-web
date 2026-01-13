@@ -1,0 +1,20 @@
+# robots.txt for DotBin - CRM Software for Medical and Aesthetic Healthcare
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://dotbin.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /

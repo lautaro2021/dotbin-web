@@ -25,7 +25,7 @@ export const Navbar = () => {
 
                 <div className="flex items-center gap-3">
                     <Button variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                        Contratar
+                        Comenzar gratis
                     </Button>
                 </div>
             </div>
