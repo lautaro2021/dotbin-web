@@ -67,51 +67,52 @@ export const CalendarMonthScreen = () => {
         <div className="flex h-full bg-gradient-to-br from-slate-50 via-white to-primary-50/30">
             <AppSidebar activeItem={1} />
 
-            <div className="flex flex-1 flex-col overflow-hidden p-6">
+            <div className="flex flex-1 flex-col overflow-hidden p-3 sm:p-6 pb-3 sm:pb-6">
                 {/* Header */}
-                <div className="mb-6 flex flex-shrink-0 items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <button className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100">
-                            <ChevronLeft className="h-4 w-4" />
+                <div className="mb-3 sm:mb-6 flex flex-shrink-0 flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                        <button className="rounded-lg p-1 sm:p-1.5 text-slate-400 hover:bg-slate-100">
+                            <ChevronLeft className="h-3 w-3 sm:h-4 sm:w-4" />
                         </button>
-                        <div className="flex items-center gap-2">
-                            <Calendar className="h-4 w-4 text-primary-500" />
-                            <span className="font-semibold text-slate-800">Enero De 2026</span>
+                        <div className="flex items-center gap-1.5 sm:gap-2">
+                            <Calendar className="h-3 w-3 sm:h-4 sm:w-4 text-primary-500" />
+                            <span className="text-xs sm:text-base font-semibold text-slate-800">Enero De 2026</span>
                         </div>
-                        <button className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100">
-                            <ChevronRight className="h-4 w-4" />
+                        <button className="rounded-lg p-1 sm:p-1.5 text-slate-400 hover:bg-slate-100">
+                            <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />
                         </button>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
                         {/* View Toggle */}
-                        <div className="flex rounded-xl border border-slate-200 bg-white p-1">
-                            <button className="rounded-lg px-3 py-1 text-xs font-medium text-slate-500 hover:bg-slate-50">
+                        <div className="flex rounded-lg sm:rounded-xl border border-slate-200 bg-white p-0.5 sm:p-1">
+                            <button className="rounded-md sm:rounded-lg px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium text-slate-500 hover:bg-slate-50">
                                 Día
                             </button>
-                            <button className="rounded-lg px-3 py-1 text-xs font-medium text-slate-500 hover:bg-slate-50">
+                            <button className="rounded-md sm:rounded-lg px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium text-slate-500 hover:bg-slate-50">
                                 Semana
                             </button>
-                            <button className="rounded-lg bg-primary-100 px-3 py-1 text-xs font-medium text-primary-600">
+                            <button className="rounded-md sm:rounded-lg bg-primary-100 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium text-primary-600">
                                 Mes
                             </button>
                         </div>
 
                         {/* Add Button */}
-                        <button className="flex items-center gap-1.5 rounded-xl bg-slate-800 px-4 py-2 text-xs font-medium text-white shadow-lg transition-all hover:bg-slate-700">
-                            <Plus className="h-3.5 w-3.5" />
-                            Nuevo
+                        <button className="flex items-center gap-1 sm:gap-1.5 rounded-lg sm:rounded-xl bg-slate-800 px-2 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-medium text-white shadow-lg transition-all hover:bg-slate-700">
+                            <Plus className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                            <span className="hidden sm:inline">Nuevo</span>
                         </button>
                     </div>
                 </div>
 
                 {/* Calendar Grid */}
-                <div className="glass-panel flex flex-1 flex-col overflow-hidden rounded-2xl">
+                <div className="glass-panel flex flex-1 flex-col overflow-hidden rounded-xl sm:rounded-2xl">
                     {/* Day Headers */}
                     <div className="grid flex-shrink-0 grid-cols-7 border-b border-slate-100">
-                        {days.map((day) => (
-                            <div key={day} className="py-3 text-center text-[10px] font-semibold tracking-wider text-slate-400">
-                                {day}
+                        {days.map((day, index) => (
+                            <div key={day} className="py-1.5 sm:py-3 text-center text-[8px] sm:text-[10px] font-semibold tracking-wider text-slate-400">
+                                <span className="sm:hidden">{day.charAt(0)}</span>
+                                <span className="hidden sm:inline">{day}</span>
                             </div>
                         ))}
                     </div>
@@ -125,33 +126,33 @@ export const CalendarMonthScreen = () => {
                                     return (
                                         <div
                                             key={dayIndex}
-                                            className={`group relative flex h-full flex-col border-r border-slate-100 p-2 last:border-r-0 transition-colors ${day ? 'hover:bg-primary-50/50' : 'bg-slate-50/50'
+                                            className={`group relative flex h-full flex-col border-r border-slate-100 p-0.5 sm:p-2 last:border-r-0 transition-colors ${day ? 'hover:bg-primary-50/50' : 'bg-slate-50/50'
                                                 }`}
                                         >
                                             {day && (
                                                 <>
-                                                    <span className={`text-sm font-medium ${day === 12 ? 'text-primary-600' : 'text-slate-600'
+                                                    <span className={`text-[10px] sm:text-sm font-medium ${day === 12 ? 'text-primary-600' : 'text-slate-600'
                                                         }`}>
                                                         {day}
                                                     </span>
                                                     {/* Appointment count badge */}
                                                     {dayAppointments.length > 0 && (
-                                                        <div className={`absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full ${getCountColor(dayAppointments)} text-[8px] font-bold text-white`}>
+                                                        <div className={`absolute right-0.5 sm:right-1 top-0.5 sm:top-1 flex h-3 w-3 sm:h-4 sm:w-4 items-center justify-center rounded-full ${getCountColor(dayAppointments)} text-[6px] sm:text-[8px] font-bold text-white`}>
                                                             {dayAppointments.length}
                                                         </div>
                                                     )}
-                                                    {/* Display appointments */}
-                                                    <div className="mt-1 space-y-1 overflow-hidden">
+                                                    {/* Display appointments - hidden on mobile */}
+                                                    <div className="mt-0.5 sm:mt-1 space-y-0.5 sm:space-y-1 overflow-hidden hidden sm:block">
                                                         {dayAppointments.slice(0, 2).map((appointment, idx) => (
                                                             <div
                                                                 key={idx}
-                                                                className={`rounded px-1.5 py-0.5 text-[8px] font-medium ${getStatusColor(appointment.status)}`}
+                                                                className={`rounded px-1 sm:px-1.5 py-0.5 text-[6px] sm:text-[8px] font-medium ${getStatusColor(appointment.status)}`}
                                                             >
                                                                 {appointment.time} - {appointment.patient.split(' ').slice(-1)}
                                                             </div>
                                                         ))}
                                                         {dayAppointments.length > 2 && (
-                                                            <div className="px-1.5 text-[8px] font-medium text-slate-400">
+                                                            <div className="px-1 sm:px-1.5 text-[6px] sm:text-[8px] font-medium text-slate-400">
                                                                 +{dayAppointments.length - 2} más
                                                             </div>
                                                         )}
