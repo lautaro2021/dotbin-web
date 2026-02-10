@@ -8,7 +8,7 @@ import { CTA } from '@/components/CTA';
 import { Footer } from '@/components/Footer';
 import { BackgroundOrbs } from '@/components/BackgroundOrbs';
 import { MouseFollower } from '@/components/MouseFollower';
-import { Pricing } from '@/components/Pricing';
+import { HowItWorks } from '@/components/HowItWorks';
 
 const Index = () => {
     return (
@@ -24,7 +24,7 @@ const Index = () => {
             <Hero />
             <ProductShowcase />
             <Features />
-            <Pricing />
+            <HowItWorks />
             <CTA />
             <Footer />
         </div>

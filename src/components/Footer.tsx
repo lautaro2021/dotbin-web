@@ -1,13 +1,14 @@
+import { Instagram } from "lucide-react";
+
 export const Footer = () => {
     const links = {
         Producto: ['Funcionalidades', 'Soluciones', 'Precios'],
-        Legal: ['Privacidad', 'Términos', 'Seguridad'],
     };
 
     return (
         <footer className="border-t border-border px-6 py-16">
             <div className="mx-auto max-w-7xl">
-                <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-6">
+                <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
                     {/* Brand */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-2">
@@ -47,14 +48,9 @@ export const Footer = () => {
                         © 2026 dotbin. Todos los derechos reservados.
                     </p>
                     <div className="flex gap-6">
-                        <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                            Twitter
-                        </a>
-                        <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                            LinkedIn
-                        </a>
-                        <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                            GitHub
+                        <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground flex items-center gap-2">
+                            <Instagram className="h-4 w-4" />
+                            Instagram
                         </a>
                     </div>
                 </div>

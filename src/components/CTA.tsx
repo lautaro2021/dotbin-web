@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export const CTA = () => {
     return (
@@ -23,11 +24,10 @@ export const CTA = () => {
                         </p>
                         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                             <Button size="lg" className="group gap-2 bg-primary px-8 text-primary-foreground hover:bg-primary/90">
-                                Comenzar prueba gratis
-                                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </Button>
-                            <Button variant="outline" size="lg" className="border-foreground/20 px-8 hover:bg-foreground/5">
-                                Contactanos
+                                <Link href="/contacto" className="flex items-center gap-2">
+                                    Comenzar prueba gratis
+                                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                </Link>
                             </Button>
                         </div>
                         <p className="mt-6 text-sm text-muted-foreground">

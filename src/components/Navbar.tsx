@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export const Navbar = () => {
     return (
@@ -18,14 +19,16 @@ export const Navbar = () => {
                     <a href="#solutions" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                         Soluciones
                     </a>
-                    <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                        Precios
+                    <a href="#como-funciona" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                        Cómo funciona
                     </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                     <Button variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                        Comenzar gratis
+                        <Link href="/contacto">
+                            Comenzar gratis
+                        </Link>
                     </Button>
                 </div>
             </div>
